@@ -21,7 +21,7 @@
     :width="250"
     :breakpoint="767"
     show-if-above bordered>
-      <q-list >
+      <q-list  >
         <q-item-label class="text-white" header> Navigation </q-item-label>
 
         <NavLink v-for="link in navList" :key="link.title" v-bind="link" />

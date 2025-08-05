@@ -10,10 +10,7 @@ export function usecurrencify(amount) {
     }
     const currencySymbol = '$',
            ammountPossitive = Math.abs(amount),
-           ammountFormated = ammountPossitive.toLocaleString('en-US', {
-             minimumFractionDigits: 2,
-             maximumFractionDigits: 2
-           });
+           ammountFormated = ammountPossitive.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 
 
   return `${posNegSymbol} ${currencySymbol} ${ammountFormated}`;
